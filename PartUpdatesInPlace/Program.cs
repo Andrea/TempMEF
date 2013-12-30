@@ -79,14 +79,14 @@ namespace PartUpdatesInPlace
     public class BarWatcher : IPartImportsSatisfiedNotification
     {
 		[ImportMany(AllowRecomposition = true)]
-        public IEnumerable<Lazy<IBar, IBarView>> Bars { get; set; }
+        public IEnumerable<IBar> Bars { get; set; }
 
         public void OnImportsSatisfied()
         {
             if (Bars.Any())
             {
                 foreach (var bar in Bars)
-                    Console.WriteLine(bar.Metadata.Name+" "+bar.Value.Foo());
+                    Console.WriteLine(bar+" "+bar.Foo());
             }
             else
                 Console.WriteLine("No Bars present");

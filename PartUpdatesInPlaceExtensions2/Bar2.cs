@@ -4,7 +4,6 @@ using Shared;
 namespace PartUpdatesInPlaceExtensions2
 {
     [Export(typeof(IBar))]
-	[ExportMetadata("Name", "Bar2")]
     public class Bar2 : IBar
     {
         public override string ToString()
