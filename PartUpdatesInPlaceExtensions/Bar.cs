@@ -14,7 +14,7 @@ namespace PartUpdatesInPlaceExtensions
 
 	    public int Foo()
 	    {
-		    return 2;
+		    return 1;
 	    }
     }
 }

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.Hosting;
-using System.Text;
 using Shared;
 
 namespace PartUpdatesInPlace
@@ -82,7 +78,7 @@ namespace PartUpdatesInPlace
     [Export]
     public class BarWatcher : IPartImportsSatisfiedNotification
     {
-		[ImportMany(AllowRecomposition = true, RequiredCreationPolicy = CreationPolicy.NonShared)]
+		[ImportMany(AllowRecomposition = true)]
         public IEnumerable<Lazy<IBar, IBarView>> Bars { get; set; }
 
         public void OnImportsSatisfied()
