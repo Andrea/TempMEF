@@ -8,12 +8,12 @@ namespace PartUpdatesInPlaceExtensions
     {
         public override string ToString()
         {
-            return "Bar 1" + this.GetHashCode();
+            return "Bar 1 -" + this.GetHashCode();
         }
 
 	    public int Foo()
 	    {
-		    return 11;
+		    return 111111;
 	    }
     }
 }
