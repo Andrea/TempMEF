@@ -8,7 +8,7 @@ namespace PartUpdatesInPlaceExtensions
     {
         public override string ToString()
         {
-            return "Bar 1111 -" + typeof(Bar).Name +GetHashCode();
+            return "Bar 1-" + typeof(Bar).Name +GetHashCode();
         }
 
 	    public int Foo()
